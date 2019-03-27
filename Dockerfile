@@ -2,8 +2,7 @@ FROM centos
 MAINTAINER xugz@bjrrtx.com
 
 ENV VERSION=8.5.39
-RUN yum install java-1.8.0-openjdk wget curl unzip iproute net-tools -y  \
- && yum clean all && rm -rf /var/cache/yum/*
+RUN yum install java-1.8.0-openjdk wget curl unzip iproute net-tools -y && yum clean all && rm -rf /var/cache/yum/*
 RUN wget http://mirrors.shu.edu.cn/apache/tomcat/tomcat-8/v${VERSION}/bin/apache-tomcat-${VERSION}.tar.gz \
  && tar zxf apache-tomcat-${VERSION}.tar.gz \
  && mv apache-tomcat-${VERSION} /usr/local/tomcat \
